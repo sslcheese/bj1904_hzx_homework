@@ -25,11 +25,15 @@ def main():
     conn.select_db("bbs")
     # cursor.execute(sql_create_table)
 
-
-    sign_on()
-    sign_in()
-    show_all()
-
+    while True:
+        print("(1)注册  (2)登录  (3)查看")
+        operator = input("请输入操作")
+        if operator=="1":
+            sign_on()
+        elif operator=="2":
+            sign_in()
+        elif operator=="3":
+            show_all()
 
 if __name__ == "__main__":
     main()

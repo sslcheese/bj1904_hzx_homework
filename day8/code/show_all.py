@@ -12,6 +12,6 @@ def show_all():
         %s %s %s %s %s
         '''%(data['username'],usertype,data['password'],data['regtime'],data['email'])
         print(str)
+    a = input("按任意键返回")
 
 
-show_all()
