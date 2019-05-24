@@ -149,6 +149,7 @@ class Dbhelper:
 
         sql = "INSERT INTO {table}({insert_fields}) VALUES({values});"
         sql = sql.format(**self.params)
+        self.params = self.__init_param()
         print(sql)
         try:
             res = self.cursor.execute(sql)
