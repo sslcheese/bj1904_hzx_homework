@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var arr = [
+        [0,5,2,NaN,NaN,NaN,NaN],
+        [5,0,NaN,1,6,NaN,NaN],
+        [2,NaN,0,6,NaN,8,NaN],
+        [NaN,1,6,0,1,2,NaN],
+        [NaN,6,NaN,1,0,NaN,7],
+        [NaN,NaN,8,2,NaN,0,3],
+        [NaN,NaN,NaN,NaN,7,3,0]
+    ]
+
+    for(var k=0;k<arr.length;k++){
+        for(var i=0;i<arr.length;i++){
+            for(var j=0;j<arr.length;j++){
+                if(isNaN(arr[i][k]) || isNaN(arr[k][j])){
+                    continue;
+                }
+                if(isNaN(arr[i][j])){
+                    arr[i][j]=1000000;
+                }
+                arr[i][j] = Math.min(arr[i][j],arr[i][k]+arr[k][j]);
+            }
+        }
+    }
+
+    var str = ''
+
+     for(var i=0;i<arr.length;i++){
+            for(var j=0;j<arr.length;j++){
+               str += arr[i][j]+' '
+            }
+            console.log(str)
+            str = ''
+        }
+
+</script>

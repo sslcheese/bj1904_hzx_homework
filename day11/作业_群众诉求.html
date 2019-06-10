@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我要诉求-填写诉求信息</title>
+    <style>
+        div{
+            margin: 10px;
+        }
+        form{
+            margin-left: 15%;
+            width: 1000px;
+            background-color: lightcyan;
+        }
+        .head{
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        select{
+            width: 800px;
+            height: 40px;
+        }
+        input{
+            width: 800px;
+            height: 40px;
+        }
+        input[type='radio']{
+            width: 90px;height: 30px;
+        }
+        input[type='checkbox']{
+            width: 100px;height: 30px;
+        }
+        textarea{
+            width: 800px;
+            height: 240px;
+        }
+        td{
+            background-color: lightgray;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="head">
+        <table border="0" width="1000"  height="155" cellspacing="0" cellpadding="0" id="table1" align="center">
+            <tr>
+                <td width="282">
+                    <img width="268" border="0" src="image/qzsq.jpg" alt="群众诉求">
+                </td>
+                <td width="718">
+                    <img width="716" border="0" src="image/sq_banner.jpg" alt="问题清楚责任清楚效果清楚">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <form action="">
+        <div class="content">
+            <div class="note" >
+                <font color="red">“在您诉求前，请您认真阅读”<u>诉求须知</u><br>
+                红色*号为必填项
+                </font>
+            </div>
+            <div class="form">
+                <div style="background-color: limegreen;width: 100px">
+                    <h4  >诉求基本信息</h4>
+                </div>
+                <hr>
+                <div>
+                    <font color="red">*</font>诉求分类 <br>
+                    <input type="radio" name='app_type' value="1" checked>投诉
+                    <input type="radio" name='app_type' value="2">咨询
+                    <input type="radio" name='app_type' value="3">意见建议
+                    <input type="radio" name='app_type' value="4">求助 <br>
+                </div>
+                <div>
+                    <font color="red">*</font>问题发生所在城市 <br>
+                    <select name="city">
+                        <option >请选择</option>
+                        <option value="1">沈阳</option>
+                        <option value="2">大连</option>
+                        <option value="3">鞍山</option>
+                        <option value="4">抚顺</option>
+                        <option value="5">本溪</option>
+                        <option value="6">丹东</option>
+                        <option value="7">锦州</option>
+                        <option value="8">营口</option>
+                        <option value="9">阜新</option>
+                        <option value="10">辽阳</option>
+                        <option value="11">铁岭</option>
+                        <option value="12">朝阳</option>
+                        <option value="13">盘锦</option>
+                        <option value="14">葫芦岛</option>
+                    </select>
+                </div>
+                <div>
+                    <font color="red">*</font>问题发生所在区/县 <br>
+                     <select name="city">
+                         <option >请选择</option>
+                        <option value="1">沈阳</option>
+                        <option value="2">大连</option>
+                        <option value="3">鞍山</option>
+                        <option value="4">抚顺</option>
+                        <option value="5">本溪</option>
+                        <option value="6">丹东</option>
+                        <option value="7">锦州</option>
+                        <option value="8">营口</option>
+                        <option value="9">阜新</option>
+                        <option value="10">辽阳</option>
+                        <option value="11">铁岭</option>
+                        <option value="12">朝阳</option>
+                        <option value="13">盘锦</option>
+                        <option value="14">葫芦岛</option>
+                    </select>
+                </div>
+                <div>
+                    <font color="red">*</font>诉求主题 <br>
+                    <input name="subject" type="text" placeholder="请输入" width="800">
+                </div>
+                <div>
+                    <font color="red">*</font>学校名称 <br>
+                    <input name="school_name" type="text" placeholder="请输入" width="800">
+                </div>
+                <div>
+                    <font color="red">*</font>年级<br>
+                    <input name="grade" type="text" placeholder="如涉及多个年级，请在投诉内容里进一步表述" width="800">
+                </div>
+                <div>
+                    <font color="red">*</font>班级<br>
+                    <input name="class" type="text" placeholder="如涉及多个年级，请在投诉内容里进一步表述" width="800">
+                </div>
+                <div>
+                    <font color="red">*</font>教师姓名<br>
+                    <input name="teacher_name" type="text" placeholder="如涉及多个年级，请在投诉内容里进一步表述" width="800">
+                </div>
+                <div>
+                    <font color="red">*</font>补课时间<br>
+                    <input name="date" type="text" placeholder="请输入">
+                </div>
+                <div>
+                    <font color="red">*</font>补课地址<br>
+                    <input name ="address" type="text" placeholder="需提供详细地址，校外补课地址精确到门牌号">
+                </div>
+                <div>
+                    <font color="red">*</font>收费金额(元)<br>
+                    <input type="text" placeholder="请输入" name="money">
+                </div>
+                <div>
+                    <font color="red">*</font>诉求详细内容(2000字以内)<br>
+                    <textarea name="content"  cols="30" rows="10"></textarea>
+                </div>
+                <input type="checkbox">上传图片(非必选)
+                <input type="file" >
+
+                <div style="background-color: limegreen;width: 100px">
+                    <h4  >诉求人信息</h4>
+                </div>
+                <hr>
+                <div>
+                    <font color="red">*</font>姓名<br>
+                    <input type="text" placeholder="请输入" name="name">
+                </div>
+                <div>
+                    职业<br>
+                    <select name="carrer">
+                        <option >请选择</option>
+                        <option value="1">专业技术人员</option>
+                        <option value="2">企事业单位管理人员</option>
+                        <option value="3">商业/服务业人员</option>
+                        <option value="4">教师</option>
+                        <option value="5">医药卫生工作人员</option>
+                        <option value="6">国家机关/党群工作人员</option>
+                        <option value="7">工人</option>
+                        <option value="8">学生</option>
+                        <option value="9">军人</option>
+                        <option value="10">自由职业及其他</option>
+                    </select>
+                </div>
+                <div>
+                    <font color="red">*</font>手机号码<br>
+                    <input name="phonenum" type="text" placeholder="请输入真实的手机号码，否则收不到验证码">
+                </div>
+
+                <input type="submit" name="btn" value="提交保存" style="background-color: green">
+            </div>
+        </div>
+    </form>
+    <div></div>
+    <div></div>
+</body>
+</html>

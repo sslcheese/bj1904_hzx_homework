@@ -1,0 +1,33 @@
+</html>
+	<head>
+		<meta charset="utf-8" />
+		<title>短信验证码</title>
+	</head>
+	
+	<body>
+	    <!-- 点击“获取验证码”按钮，后显示“30秒后重新发送”，秒数递减，然后将“获取验证码”按钮置为不可用状态，达到0秒后重新置为可用-->
+		<input type="text" placeholder="请输入验证码">
+		<input type="button" value="获取验证码" id="btn" />
+	</body>
+</html>
+<script src="../static/jquery.min.js"></script>
+<script>
+    var timer = null
+    var second = 15
+    $("#btn").click(function () {
+        $("#btn").prop("disabled",true)
+        timer = setInterval(function () {
+            if(second!=-1){
+                $("#btn").prop('value',''+'获取验证码('+second+')')
+                console.log(second)
+                second--
+            }else{
+                clearInterval(timer)
+                second = 15
+                $("#btn").prop('value','获取验证码')
+                $("#btn").prop("disabled",false)
+            }
+
+        },1000)
+    })
+</script>

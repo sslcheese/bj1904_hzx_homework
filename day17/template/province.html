@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T44433</title>
+    <style>
+        div{
+            float:left;
+        }
+        select{
+            width: 100px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div>省 <br>
+    <select  id="province">
+        <option value="">请选择</option>
+    </select>
+</div>
+<div>市 <br>
+    <select  id="city">
+        <option value="">请选择</option>
+    </select>
+</div>
+<div>县 <br>
+    <select  id="country">
+        <option value="">请选择</option>
+    </select>
+</div>
+</body>
+</html>
+<script src="../static/jquery.min.js"></script>
+<script>
+    $.get("/province",function (data) {
+        console.log(data)
+        for(var i=0;i<data.length;i++){
+            option = "<option value='"+data[i].code+"'>"+data[i].name+"</option>"
+            $("#province").append(option)
+        }
+    })
+
+    $("#province").change(function () {
+        $.get("/city/"+this.value,function (data) {
+            console.log(data)
+            $("#city").empty()
+            $("#country").empty()
+            for(var i=0;i<data.length;i++){
+                option = "<option value='"+data[i].code+"'>"+data[i].name+"</option>"
+                $("#city").append(option)
+            }
+        })
+    })
+
+    $("#city").change(function () {
+        $.get("/city/"+this.value,function (data) {
+            console.log(data)
+            $("#country").empty()
+            for(var i=0;i<data.length;i++){
+                option = "<option value='"+data[i].code+"'>"+data[i].name+"</option>"
+                $("#country").append(option)
+            }
+        })
+    })
+</script>

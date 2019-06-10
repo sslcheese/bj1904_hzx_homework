@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三个按钮</title>
+    <style>
+        button{
+            width: 50px;
+            height: 30px;
+            background: turquoise;
+            margin-left: 5px;
+        }
+        div{
+            width:160px;
+            height: 100px;
+            background: red;
+            margin-left: 5px;
+
+        }
+        div span{
+            font-size: 20px;
+            text-align:center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <div>
+        <span>今天是个好日子</span>
+    </div>
+</body>
+</html>
+<script>
+
+    var oDiv = document.getElementsByTagName('div')[0];
+    var oSpan = oDiv.getElementsByTagName('span')[0];
+    var aBtn = document.getElementsByTagName('button')
+
+    aBtn[0].onclick = function () {
+        a1 = parseInt(Math.random()*255);
+        a2 = parseInt(Math.random()*255);
+        a3 = parseInt(Math.random()*255);
+
+        oDiv.style.background = 'rgb('+a1+','+a2+','+a3+')';
+        console.log('rgb('+a1+','+a2+','+a3+')')
+    }
+
+    aBtn[1].onclick = function () {
+        if(oDiv.style.display == ''){
+            oDiv.style.display = 'none';
+        }else{
+            oDiv.style.display = ''
+        }
+    }
+
+    aBtn[2].onclick = function (){
+        a1 = parseInt(Math.random()*255);
+        a2 = parseInt(Math.random()*255);
+        a3 = parseInt(Math.random()*255);
+
+        oSpan.style.color = 'rgb('+a1+','+a2+','+a3+')';
+    }
+
+</script>
